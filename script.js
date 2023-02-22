@@ -1,5 +1,5 @@
 const inputField = document.querySelector('#newTodoInput');
-const addButton = document.querySelector('#addTodobtn');
+const addButton = document.querySelector('#addTodoBtn');
 
 addButton.addEventListener('click', () => {
   const todoText = inputField.value;
