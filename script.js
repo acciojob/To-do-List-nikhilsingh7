@@ -1,15 +1,16 @@
-let inputField = document.querySelector('#newTodoInput');
-let addButton = document.querySelector('#addTodoBtn');
+const inputField = document.querySelector('#todo-input');
+const addButton = document.querySelector('#add-button');
 
 addButton.addEventListener('click', () => {
-  let todoText = inputField.value;
+  const todoText = inputField.value;
 
-  let newItem = document.createElement('ol');
+  const newItem = document.createElement('li');
   newItem.textContent = todoText;
 
-  let todoList = document.querySelector('#todoList');
+  const todoList = document.querySelector('#todo-list');
   todoList.appendChild(newItem);
 
   inputField.value = '';
 });
+
 
