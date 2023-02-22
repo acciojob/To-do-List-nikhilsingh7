@@ -1,5 +1,5 @@
-const inputField = document.querySelector('#todo-input');
-const addButton = document.querySelector('#add-button');
+const inputField = document.querySelector('#newTodoInput');
+const addButton = document.querySelector('#addTodoBtn');
 
 addButton.addEventListener('click', () => {
   const todoText = inputField.value;
@@ -7,7 +7,7 @@ addButton.addEventListener('click', () => {
   const newItem = document.createElement('ol');
   newItem.textContent = todoText;
 
-  const todoList = document.querySelector('#todo-list');
+  const todoList = document.querySelector('#todoList');
   todoList.appendChild(newItem);
 
   inputField.value = '';
