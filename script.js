@@ -1,16 +1,20 @@
-let inputField = document.querySelector('#newTodoInput');
-let addButton = document.querySelector('#addTodoBtn');
+//your code here
+//your code here
+var todoValue = document.getElementById("newTodoInput");
+var btn = document.getElementById("addTodoBtn");
+var ol = document.getElementById("todoList");
 
-addButton.addEventListener('click', () => {
-  let todoText = inputField.value;
+function addTodo() {
+	if (todoValue.value){
+		var li = document.createElement("li");
+		li.textContent = todoValue.value;
+		ol.appendChild(li);
+		todoValue.value="";
+	}
+}
+btn.addEventListener("click",addTodo);
+  
 
-  let newItem = document.createElement('ol');
-  newItem.textContent = todoText;
-
-  let todoList = document.querySelector('#todoList');
-  todoList.appendChild(newItem);
-
-  inputField.value = '';
-});
+  
 
 
